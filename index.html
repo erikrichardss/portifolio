@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Portfólio de Erik, desenvolvedor web.">
+
+    <title>Erik | Desenvolvedor Web</title>
+
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="./js/script.js" defer></script>
+    <script src="./js/interactive.js" defer></script>
+</head>
+
+<body>
+    <!-- Container principal do fundo -->
+    <div id="fundo-dinamico">
+        <!-- Camada 1: Visível no topo -->
+        <div class="camada-scroll camada-1 ativa"></div>
+
+        <!-- Camada 2: Aparece ao rolar um pouco -->
+        <div class="camada-scroll camada-2"></div>
+
+        <!-- Camada 3: Aparece no final -->
+        <div class="camada-scroll camada-3"></div>
+
+        <!-- As partículas serão injetadas aqui via JS -->
+    </div>
+    <!-- ==============================
+         HEADER
+    =============================== -->
+    <header class="header">
+
+        <nav class="navbar">
+
+            <!-- LOGO -->
+            <a href="#inicio" class="logo">
+                <span class="logo-symbol">&lt;/&gt;</span>
+                <span class="logo-text">
+                    Erik<span>.</span>
+                </span>
+            </a>
+
+
+            <!-- MENU -->
+            <div class="nav-menu" id="navMenu">
+
+                <a href="#inicio" class="nav-link active">
+                    Início
+                </a>
+
+                <a href="#sobre" class="nav-link">
+                    Sobre
+                </a>
+
+                <a href="#habilidades" class="nav-link">
+                    Habilidades
+                </a>
+
+                <a href="#projetos" class="nav-link">
+                    Projetos
+                </a>
+
+                <a href="#contato" class="nav-link contact-link">
+                    Contato
+                </a>
+
+            </div>
+
+
+            <!-- BOTÃO MOBILE -->
+            <button class="menu-button" id="menuButton" type="button" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ==============================
+         CONTEÚDO TEMPORÁRIO
+         Apenas para testar a navegação
+    =============================== -->
+
+    <main>
+
+        <!-- ==============================
+         HERO / INÍCIO
+    =============================== -->
+
+        <section class="hero" id="inicio">
+
+            <!-- Elementos decorativos -->
+            <div class="hero-glow hero-glow-one"></div>
+            <div class="hero-glow hero-glow-two"></div>
+
+            <div class="hero-container">
+
+                <!-- =================================
+                 TEXTO
+            ================================== -->
+
+                <div class="hero-content">
+
+                    <div class="hero-status">
+                        <span class="status-dot"></span>
+                        Disponível para oportunidades
+                    </div>
+
+
+                    <p class="hero-introduction">
+                        Olá, eu sou
+                    </p>
+
+
+                    <h1 class="hero-title">
+                        Erik<span>.</span>
+                    </h1>
+
+
+                    <h2 class="hero-subtitle">
+                        Desenvolvedor Web
+                    </h2>
+
+
+                    <p class="hero-description">
+                        Sou um desenvolvedor web em formação, apaixonado
+                        por tecnologia e pela criação de experiências
+                        digitais modernas, funcionais e intuitivas.
+                    </p>
+
+
+                    <!-- =================================
+                     BOTÕES
+                ================================== -->
+
+                    <div class="hero-buttons">
+
+                        <a href="#projetos" class="hero-button primary-button">
+                            <span>Ver meus projetos</span>
+
+                            <span class="button-arrow">
+                                →
+                            </span>
+                        </a>
+
+
+                        <a href="https://github.com/" target="_blank" rel="noopener noreferrer"
+                            class="hero-button secondary-button">
+                            GitHub
+                        </a>
+
+                    </div>
+
+
+                    <!-- =================================
+                     TECNOLOGIAS
+                ================================== -->
+
+                    <div class="hero-technologies">
+
+                        <span>Atualmente estudando</span>
+
+                        <div class="technology-list">
+
+                            <span>JAVA</span>
+                            <span>SPRINGBOOT</span>
+                            <span>BANCO DE DADOS</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                 FOTO
+            ================================== -->
+
+                <div class="hero-image-container">
+
+                    <div class="image-decoration decoration-one"></div>
+                    <div class="image-decoration decoration-two"></div>
+
+
+                    <div class="hero-image-wrapper">
+
+                        <img src="photos/my-photo.jpg" alt="Foto de Erik" class="hero-image">
+
+                    </div>
+
+
+                    <!-- Elemento flutuante -->
+
+                    <div class="code-card">
+
+                        <span class="code-symbol">&lt;/&gt;</span>
+
+                        <div>
+                            <strong>Web Developer</strong>
+                            <small>Building the web</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a href="#sobre" class="scroll-indicator">
+
+                <span class="scroll-text">
+                    Scroll para explorar
+                </span>
+
+                <span class="scroll-arrow">
+                    ↓
+                </span>
+
+            </a>
+
+        </section>
+
+
+        <!-- ==================================
+         RESTANTE DO PORTFÓLIO
+         Vamos construir depois
+    =================================== -->
+
+        <!-- ==============================
+     SOBRE MIM
+=============================== -->
+        <section class="about section" id="sobre">
+
+            <div class="about-container">
+
+                <!-- Título da Seção -->
+                <div class="section-header">
+                    <span class="section-subtitle">Conheça minha trajetória</span>
+                    <h2 class="section-title">Sobre mim<span>.</span></h2>
+                </div>
+
+                <div class="about-content">
+
+                    <!-- Coluna Principal: Texto de Apresentação -->
+                    <div class="about-text-column">
+                        <p class="about-lead">
+                            Sou um desenvolvedor web focado em criar soluções funcionais, bem estruturadas e com
+                            visual moderno.
+                        </p>
+
+                        <p class="about-description">
+                            Minha jornada na programação é movida por curiosidade e disciplina. Tenho me dedicado
+                            intensamente aos fundamentos do desenvolvimento web, combinando **HTML, CSS e
+                            JavaScript** para construir interfaces fluidas e eficientes.
+                        </p>
+
+                        <p class="about-description">
+                            Além de escrever código, gosto de entender a lógica por trás da resolução de problemas e
+                            como transformar requisitos em experiências intuitivas para o usuário final. Estou
+                            constantemente praticando, construindo projetos reais e aprimorando minhas competências.
+                        </p>
+
+                        <!-- Destaques / Pilares -->
+                        <div class="about-highlights">
+                            <div class="highlight-item">
+                                <div class="highlight-icon">🎯</div>
+                                <div>
+                                    <strong>Foco e Disciplina</strong>
+                                    <span>Compromisso contínuo com a evolução técnica e consistência.</span>
+                                </div>
+                            </div>
+
+                            <div class="highlight-item">
+                                <div class="highlight-icon">⚡</div>
+                                <div>
+                                    <strong>Código Limpo</strong>
+                                    <span>Preocupação com boa estrutura, organização e legibilidade.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coluna Secundária: Cards de Estatísticas / Fatos -->
+                    <div class="about-cards-column">
+
+                        <div class="info-card">
+                            <div class="info-card-header">
+                                <span class="card-tag">Atuação</span>
+                                <h3>Desenvolvimento Frontend</h3>
+                            </div>
+                            <p>Construção de páginas responsivas, otimizadas para performance e focadas na melhor
+                                experiência visual.</p>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-card-header">
+                                <span class="card-tag">Aprendizado</span>
+                                <h3>Evolução Constante</h3>
+                            </div>
+                            <p>Expandindo conhecimentos diariamente em arquitetura de código, JavaScript moderno e
+                                melhores práticas do mercado.</p>
+                        </div>
+
+                        <div class="info-card highlight-border">
+                            <div class="info-card-header">
+                                <span class="card-tag status">Objetivo</span>
+                                <h3>Primeira Oportunidade</h3>
+                            </div>
+                            <p>Pronto para contribuir em projetos desafiadores e colaborar com equipes de
+                                desenvolvimento.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ==============================
+     HABILIDADES / TECH STACK
+=============================== -->
+        <section class="skills section" id="habilidades">
+
+            <div class="skills-container">
+
+                <!-- Título da Seção -->
+                <div class="section-header">
+                    <span class="section-subtitle">Tecnologias & Ferramentas</span>
+                    <h2 class="section-title">Minhas Habilidades<span>.</span></h2>
+                </div>
+
+                <div class="skills-grid">
+
+                    <!-- Categoria 1: Frontend Base -->
+                    <div class="skills-card">
+                        <div class="skills-card-header">
+                            <div class="skills-icon">💻</div>
+                            <h3>Desenvolvimento Frontend</h3>
+                        </div>
+                        <p class="skills-card-desc">Construção de interfaces web responsivas, acessíveis e focadas
+                            em usabilidade.</p>
+
+                        <div class="skills-tags">
+                            <div class="skill-tag active">
+                                <span class="tag-dot"></span>
+                                HTML5
+                            </div>
+                            <div class="skill-tag active">
+                                <span class="tag-dot"></span>
+                                CSS3 / Flexbox / Grid
+                            </div>
+                            <div class="skill-tag active">
+                                <span class="tag-dot"></span>
+                                JavaScript (ES6+)
+                            </div>
+                            <div class="skill-tag">
+                                <span class="tag-dot learning"></span>
+                                TypeScript
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categoria 2: Linguagens & Backend em Estudo -->
+                    <div class="skills-card">
+                        <div class="skills-card-header">
+                            <div class="skills-icon">⚙️</div>
+                            <h3>Lógica & Linguagens</h3>
+                        </div>
+                        <p class="skills-card-desc">Estruturação de algoritmos, POO e base sólida em desenvolvimento
+                            de software.</p>
+
+                        <div class="skills-tags">
+                            <div class="skill-tag active">
+                                <span class="tag-dot"></span>
+                                Java
+                            </div>
+                            <div class="skill-tag active">
+                                <span class="tag-dot"></span>
+                                Lógica de Programação
+                            </div>
+                            <div class="skill-tag active">
+                                <span class="tag-dot"></span>
+                                POO (Orientação a Objetos)
+                            </div>
+                            <div class="skill-tag">
+                                <span class="tag-dot learning"></span>
+                                Estrutura de Dados
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categoria 3: Ferramentas & Fluxo de Trabalho -->
+                    <div class="skills-card">
+                        <div class="skills-card-header">
+                            <div class="skills-icon">🛠️</div>
+                            <h3>Ferramentas & Ambiente</h3>
+                        </div>
+                        <p class="skills-card-desc">Ecossistema de software e ferramentas utilizadas no
+                            desenvolvimento diário.</p>
+
+                        <div class="skills-tags">
+                            <div class="skill-tag active">
+                                <span class="tag-dot"></span>
+                                Git / GitHub
+                            </div>
+                            <div class="skill-tag active">
+                                <span class="tag-dot"></span>
+                                VS Code
+                            </div>
+                            <div class="skill-tag active">
+                                <span class="tag-dot"></span>
+                                IntelliJ IDEA
+                            </div>
+                            <div class="skill-tag active">
+                                <span class="tag-dot"></span>
+                                DevTools
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Legenda Visual -->
+                <div class="skills-legend">
+                    <div class="legend-item">
+                        <span class="tag-dot"></span>
+                        <span>Uso Prático / Dominado</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="tag-dot learning"></span>
+                        <span>Em Estudo Ativo</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ==============================
+     PROJETOS / PORTFÓLIO
+=============================== -->
+        <section class="projects section" id="projetos">
+
+            <div class="projects-container">
+
+                <!-- Título da Seção -->
+                <div class="section-header">
+                    <span class="section-subtitle">Trabalhos & Práticas</span>
+                    <h2 class="section-title">Projetos Em Destaque<span>.</span></h2>
+                </div>
+
+                <!-- Filtros por Categoria -->
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="frontend">Frontend</button>
+                    <button class="filter-btn" data-filter="backend">Backend & Java</button>
+                    <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+                </div>
+
+                <!-- Grid de Cards de Projetos -->
+                <div class="projects-grid">
+
+                    <!-- PROJETO 1: Modelo Frontend -->
+                    <article class="project-card" data-category="frontend">
+                        <div class="project-image-wrapper">
+                            <img src="./assets/images/erik.jpg" alt="Preview do Projeto" class="project-image">
+                            <div class="project-overlay">
+                                <span class="project-category-tag">Frontend</span>
+                            </div>
+                        </div>
+
+                        <div class="project-content">
+                            <h3 class="project-title">Portfólio Pessoal Minimalista</h3>
+                            <p class="project-description">
+                                Desenvolvimento de um portfólio responsivo, dark mode nativo, com foco em
+                                performance, acessibilidade e arquitetura CSS organizada sem frameworks.
+                            </p>
+
+                            <div class="project-techs">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+
+                            <div class="project-links">
+                                <a href="#" target="_blank" rel="noopener noreferrer" class="project-link primary">
+                                    <span>Ver Projeto</span>
+                                    <span class="link-arrow">↗</span>
+                                </a>
+                                <a href="https://github.com/" target="_blank" rel="noopener noreferrer"
+                                    class="project-link secondary">
+                                    <span>Repositório</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PROJETO 2: Modelo Backend / Java (Exemplo) -->
+                    <article class="project-card" data-category="backend">
+                        <div class="project-image-wrapper placeholder-bg">
+                            <div class="project-code-preview">
+                                <code>&lt;java/&gt; API RESTful</code>
+                            </div>
+                            <div class="project-overlay">
+                                <span class="project-category-tag">Backend</span>
+                            </div>
+                        </div>
+
+                        <div class="project-content">
+                            <h3 class="project-title">Sistema de Gerenciamento</h3>
+                            <p class="project-description">
+                                Estruturação de API em Java aplicando conceitos de Programação Orientada a Objetos,
+                                persistência de dados e regras de negócio estruturadas.
+                            </p>
+
+                            <div class="project-techs">
+                                <span>Java</span>
+                                <span>POO</span>
+                                <span>SQL</span>
+                            </div>
+
+                            <div class="project-links">
+                                <a href="https://github.com/" target="_blank" rel="noopener noreferrer"
+                                    class="project-link secondary">
+                                    <span>Repositório no GitHub</span>
+                                    <span class="link-arrow">↗</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PROJETO 3: Modelo Full-Stack ou Próximo Projeto -->
+                    <article class="project-card" data-category="fullstack">
+                        <div class="project-image-wrapper placeholder-bg">
+                            <div class="project-code-preview">
+                                <code>{ App Web }</code>
+                            </div>
+                            <div class="project-overlay">
+                                <span class="project-category-tag">Full-Stack</span>
+                            </div>
+                        </div>
+
+                        <div class="project-content">
+                            <h3 class="project-title">Aplicação Web Interativa</h3>
+                            <p class="project-description">
+                                Interface conectada a banco de dados e APIs externas, unindo dynamic rendering no
+                                cliente com processamento no servidor.
+                            </p>
+
+                            <div class="project-techs">
+                                <span>JavaScript</span>
+                                <span>Java</span>
+                                <span>HTML/CSS</span>
+                            </div>
+
+                            <div class="project-links">
+                                <a href="https://github.com/" target="_blank" rel="noopener noreferrer"
+                                    class="project-link secondary">
+                                    <span>Ver Código</span>
+                                    <span class="link-arrow">↗</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ==============================
+     CONTATO
+=============================== -->
+        <section class="contact section" id="contato">
+
+            <div class="contact-container">
+
+                <!-- Título da Seção -->
+                <div class="section-header">
+                    <span class="section-subtitle">Vamos conversar</span>
+                    <h2 class="section-title">Entre Em Contato<span>.</span></h2>
+                </div>
+
+                <div class="contact-content">
+
+                    <!-- Coluna 1: Informações de Contato & Redes -->
+                    <div class="contact-info">
+                        <h3 class="contact-heading">Tem algum projeto em mente ou oportunidade de trabalho?</h3>
+                        <p class="contact-text">
+                            Estou sempre aberto a conversar sobre novos projetos, trocar ideias sobre
+                            desenvolvimento web ou discutir oportunidades na área de tecnologia.
+                        </p>
+
+                        <div class="contact-cards">
+
+                            <!-- Email -->
+                            <a href="mailto:seu-email@email.com" class="contact-card">
+                                <div class="contact-card-icon">✉️</div>
+                                <div class="contact-card-text">
+                                    <span>Email</span>
+                                    <strong>seu-email@email.com</strong>
+                                </div>
+                            </a>
+
+                            <!-- GitHub -->
+                            <a href="https://github.com/" target="_blank" rel="noopener noreferrer"
+                                class="contact-card">
+                                <div class="contact-card-icon">💻</div>
+                                <div class="contact-card-text">
+                                    <span>GitHub</span>
+                                    <strong>github.com/seu-usuario</strong>
+                                </div>
+                            </a>
+
+                            <!-- LinkedIn -->
+                            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer"
+                                class="contact-card">
+                                <div class="contact-card-icon">💼</div>
+                                <div class="contact-card-text">
+                                    <span>LinkedIn</span>
+                                    <strong>linkedin.com/in/seu-usuario</strong>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ==============================
+     RODAPÉ / FOOTER
+=============================== -->
+        <footer class="footer">
+            <div class="footer-container">
+                <p>© 2026 Erik. Todos os direitos reservados.</p>
+                <p>Desenvolvido com foco em alta performance e design moderno.</p>
+            </div>
+        </footer>
+
+    </main>
+</body>
+
+</html>
