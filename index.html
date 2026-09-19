@@ -9,42 +9,36 @@
 
     <title>Erik | Desenvolvedor Web</title>
 
+    <link rel="icon" type="image/svg+xml" href="photos/gemini-svg.svg">
+
     <link rel="stylesheet" href="./css/animations.css">
     <link rel="stylesheet" href="./css/style.css">
 
     <script src="./js/script.js" defer></script>
+    <script src="./js/darkMode.js" defer></script>
     <script src="./js/interactive.js" defer></script>
 </head>
 
 <body>
-    <!-- Container principal do fundo -->
     <div id="fundo-dinamico">
-        <!-- Camada 1: Visível no topo -->
         <div class="camada-scroll camada-1 ativa"></div>
 
-        <!-- Camada 2: Aparece ao rolar um pouco -->
         <div class="camada-scroll camada-2"></div>
 
-        <!-- Camada 3: Aparece no final -->
         <div class="camada-scroll camada-3"></div>
 
-        <!-- As partículas serão injetadas aqui via JS -->
     </div>
     <!-- ==============================
          HEADER
     =============================== -->
     <header class="header">
-
         <nav class="navbar">
-
-            <!-- LOGO -->
             <a href="#inicio" class="logo">
                 <span class="logo-symbol">&lt;/&gt;</span>
                 <span class="logo-text">
                     Erik<span>.</span>
                 </span>
             </a>
-
 
             <!-- MENU -->
             <div class="nav-menu" id="navMenu">
@@ -69,8 +63,15 @@
                     Contato
                 </a>
 
+
             </div>
 
+
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Ativar modo escuro"
+                aria-pressed="false" title="Alternar tema">
+                <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+                <span class="theme-toggle-label">Escuro</span>
+            </button>
 
             <!-- BOTÃO MOBILE -->
             <button class="menu-button" id="menuButton" type="button" aria-label="Abrir menu" aria-expanded="false">
@@ -78,57 +79,35 @@
                 <span></span>
                 <span></span>
             </button>
-
         </nav>
-
     </header>
 
-
-    <!-- ==============================
-         CONTEÚDO TEMPORÁRIO
-         Apenas para testar a navegação
-    =============================== -->
-
     <main>
-
         <!-- ==============================
          HERO / INÍCIO
     =============================== -->
-
         <section class="hero" id="inicio">
 
-            <!-- Elementos decorativos -->
             <div class="hero-glow hero-glow-one"></div>
             <div class="hero-glow hero-glow-two"></div>
-
             <div class="hero-container">
-
-                <!-- =================================
-                 TEXTO
-            ================================== -->
-
                 <div class="hero-content">
-
                     <div class="hero-status">
                         <span class="status-dot"></span>
                         Disponível para oportunidades
                     </div>
 
-
                     <p class="hero-introduction">
                         Olá, eu sou
                     </p>
-
 
                     <h1 class="hero-title">
                         Erik<span>.</span>
                     </h1>
 
-
                     <h2 class="hero-subtitle">
                         Desenvolvedor Web
                     </h2>
-
 
                     <p class="hero-description">
                         Sou um desenvolvedor web em formação, apaixonado
@@ -136,88 +115,58 @@
                         digitais modernas, funcionais e intuitivas.
                     </p>
 
-
-                    <!-- =================================
-                     BOTÕES
-                ================================== -->
-
                     <div class="hero-buttons">
-
                         <a href="#projetos" class="hero-button primary-button">
                             <span>Ver meus projetos</span>
-
                             <span class="button-arrow">
                                 →
                             </span>
                         </a>
 
-
                         <a href="https://github.com/" target="_blank" rel="noopener noreferrer"
                             class="hero-button secondary-button">
                             GitHub
                         </a>
-
                     </div>
-
 
                     <!-- =================================
                      TECNOLOGIAS
                 ================================== -->
 
                     <div class="hero-technologies">
-
                         <span>Atualmente estudando</span>
-
                         <div class="technology-list">
-
                             <span>JAVA</span>
                             <span>SPRINGBOOT</span>
                             <span>BANCO DE DADOS</span>
-
                         </div>
-
                     </div>
-
                 </div>
-
 
                 <!-- =================================
                  FOTO
             ================================== -->
 
                 <div class="hero-image-container">
-
                     <div class="image-decoration decoration-one"></div>
                     <div class="image-decoration decoration-two"></div>
-
-
                     <div class="hero-image-wrapper">
-
                         <img src="photos/my-photo.jpg" alt="Foto de Erik" class="hero-image">
-
                     </div>
-
 
                     <!-- Elemento flutuante -->
 
                     <div class="code-card">
-
                         <span class="code-symbol">&lt;/&gt;</span>
-
                         <div>
                             <strong>Web Developer</strong>
                             <small>Building the web</small>
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
 
-
             <a href="#sobre" class="scroll-indicator">
-
                 <span class="scroll-text">
                     Scroll para explorar
                 </span>
@@ -225,22 +174,13 @@
                 <span class="scroll-arrow">
                     ↓
                 </span>
-
             </a>
-
         </section>
-
-
-        <!-- ==================================
-         RESTANTE DO PORTFÓLIO
-         Vamos construir depois
-    =================================== -->
 
         <!-- ==============================
      SOBRE MIM
 =============================== -->
         <section class="about section" id="sobre">
-
             <div class="about-container">
 
                 <!-- Título da Seção -->
@@ -251,7 +191,6 @@
 
                 <div class="about-content">
 
-                    <!-- Coluna Principal: Texto de Apresentação -->
                     <div class="about-text-column">
                         <p class="about-lead">
                             Sou um desenvolvedor web focado em criar soluções funcionais, bem estruturadas e com
@@ -273,7 +212,7 @@
                         <!-- Destaques / Pilares -->
                         <div class="about-highlights">
                             <div class="highlight-item">
-                                <div class="highlight-icon">🎯</div>
+                                <div class="highlight-icon">◎</div>
                                 <div>
                                     <strong>Foco e Disciplina</strong>
                                     <span>Compromisso contínuo com a evolução técnica e consistência.</span>
@@ -281,7 +220,7 @@
                             </div>
 
                             <div class="highlight-item">
-                                <div class="highlight-icon">⚡</div>
+                                <div class="highlight-icon">✦</div>
                                 <div>
                                     <strong>Código Limpo</strong>
                                     <span>Preocupação com boa estrutura, organização e legibilidade.</span>
@@ -343,10 +282,9 @@
 
                 <div class="skills-grid">
 
-                    <!-- Categoria 1: Frontend Base -->
                     <div class="skills-card">
                         <div class="skills-card-header">
-                            <div class="skills-icon">💻</div>
+                            <div class="skills-icon">⌨</div>
                             <h3>Desenvolvimento Frontend</h3>
                         </div>
                         <p class="skills-card-desc">Construção de interfaces web responsivas, acessíveis e focadas
@@ -372,10 +310,9 @@
                         </div>
                     </div>
 
-                    <!-- Categoria 2: Linguagens & Backend em Estudo -->
                     <div class="skills-card">
                         <div class="skills-card-header">
-                            <div class="skills-icon">⚙️</div>
+                            <div class="skills-icon">⚙</div>
                             <h3>Lógica & Linguagens</h3>
                         </div>
                         <p class="skills-card-desc">Estruturação de algoritmos, POO e base sólida em desenvolvimento
@@ -401,10 +338,9 @@
                         </div>
                     </div>
 
-                    <!-- Categoria 3: Ferramentas & Fluxo de Trabalho -->
                     <div class="skills-card">
                         <div class="skills-card-header">
-                            <div class="skills-icon">🛠️</div>
+                            <div class="skills-icon">▣</div>
                             <h3>Ferramentas & Ambiente</h3>
                         </div>
                         <p class="skills-card-desc">Ecossistema de software e ferramentas utilizadas no
@@ -455,7 +391,6 @@
 
             <div class="projects-container">
 
-                <!-- Título da Seção -->
                 <div class="section-header">
                     <span class="section-subtitle">Trabalhos & Práticas</span>
                     <h2 class="section-title">Projetos Em Destaque<span>.</span></h2>
@@ -472,7 +407,6 @@
                 <!-- Grid de Cards de Projetos -->
                 <div class="projects-grid">
 
-                    <!-- PROJETO 1: Modelo Frontend -->
                     <article class="project-card" data-category="frontend">
                         <div class="project-image-wrapper">
                             <img src="./assets/images/erik.jpg" alt="Preview do Projeto" class="project-image">
@@ -507,7 +441,6 @@
                         </div>
                     </article>
 
-                    <!-- PROJETO 2: Modelo Backend / Java (Exemplo) -->
                     <article class="project-card" data-category="backend">
                         <div class="project-image-wrapper placeholder-bg">
                             <div class="project-code-preview">
@@ -541,7 +474,6 @@
                         </div>
                     </article>
 
-                    <!-- PROJETO 3: Modelo Full-Stack ou Próximo Projeto -->
                     <article class="project-card" data-category="fullstack">
                         <div class="project-image-wrapper placeholder-bg">
                             <div class="project-code-preview">
@@ -588,7 +520,6 @@
 
             <div class="contact-container">
 
-                <!-- Título da Seção -->
                 <div class="section-header">
                     <span class="section-subtitle">Vamos conversar</span>
                     <h2 class="section-title">Entre Em Contato<span>.</span></h2>
@@ -596,7 +527,6 @@
 
                 <div class="contact-content">
 
-                    <!-- Coluna 1: Informações de Contato & Redes -->
                     <div class="contact-info">
                         <h3 class="contact-heading">Tem algum projeto em mente ou oportunidade de trabalho?</h3>
                         <p class="contact-text">
@@ -606,29 +536,26 @@
 
                         <div class="contact-cards">
 
-                            <!-- Email -->
                             <a href="mailto:seu-email@email.com" class="contact-card">
-                                <div class="contact-card-icon">✉️</div>
+                                <div class="contact-card-icon">✉</div>
                                 <div class="contact-card-text">
                                     <span>Email</span>
                                     <strong>seu-email@email.com</strong>
                                 </div>
                             </a>
 
-                            <!-- GitHub -->
                             <a href="https://github.com/" target="_blank" rel="noopener noreferrer"
                                 class="contact-card">
-                                <div class="contact-card-icon">💻</div>
+                                <div class="contact-card-icon">⌘</div>
                                 <div class="contact-card-text">
                                     <span>GitHub</span>
                                     <strong>github.com/seu-usuario</strong>
                                 </div>
                             </a>
 
-                            <!-- LinkedIn -->
                             <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer"
                                 class="contact-card">
-                                <div class="contact-card-icon">💼</div>
+                                <div class="contact-card-icon">◈</div>
                                 <div class="contact-card-text">
                                     <span>LinkedIn</span>
                                     <strong>linkedin.com/in/seu-usuario</strong>

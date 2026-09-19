@@ -18,28 +18,49 @@ html {
     scroll-padding-top: 90px;
 }
 
-body {
-    background-color: #08090d;
-    color: #ffffff;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
+:root {
+    --background: #f4f7fb73;
+    --background-secondary: #eef3fb;
+    --surface: rgba(255, 255, 255, 0.86);
+    --surface-soft: rgba(255, 255, 255, 0.72);
+    --surface-strong: rgba(255, 255, 255, 0.96);
+    --text: #17212d;
+    --text-secondary: #4a586d;
+    --text-muted: #69778d;
+    --primary: #5c4ef5;
+    --primary-light: #7d72ff;
+    --border: rgba(15, 23, 42, 0.09);
+    --shadow: rgba(76, 85, 92, 0.14);
+    --shadow-strong: rgba(76, 85, 92, 0.2);
+    --card-glow: rgba(92, 78, 245, 0.08);
 }
 
-
-:root {
-    --background: #08090d8f;
+html[data-theme="dark"] {
+    --background: #08090d4c;
     --background-secondary: #101116;
-
-    --text: #ffffff;
-    --text-secondary: #9296a3;
-
+    --surface: rgba(18, 20, 28, 0.9);
+    --surface-soft: rgba(255, 255, 255, 0.03);
+    --surface-strong: rgba(14, 15, 21, 0.9);
+    --text: #f5f7ff;
+    --text-secondary: #b3bbcb;
+    --text-muted: #7c8597;
     --primary: #7c5cff;
     --primary-light: #9b85ff;
-
     --border: rgba(255, 255, 255, 0.08);
+    --shadow: rgba(0, 0, 0, 0.25);
+    --shadow-strong: rgba(0, 0, 0, 0.38);
+    --card-glow: rgba(124, 92, 255, 0.08);
+}
+
+html {
+    background-color: var(--background);
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 
@@ -72,7 +93,7 @@ body {
 */
 
 .header.scrolled {
-    background-color: rgba(8, 9, 13, 0.85);
+    background-color: rgba(255, 255, 255, 0.8);
 
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
@@ -80,7 +101,12 @@ body {
     border-color: var(--border);
 
     box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.25);
+        0 10px 30px var(--shadow);
+}
+
+html[data-theme="dark"] .header.scrolled {
+    background-color: rgba(8, 9, 13, 0.85);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -184,6 +210,41 @@ body {
     gap: 5px;
 }
 
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 42px;
+    padding: 8px 14px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--surface-soft);
+    color: var(--text);
+    cursor: pointer;
+    font: inherit;
+    transition: transform 0.25s ease, border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-2px);
+    border-color: rgba(124, 92, 255, 0.35);
+    box-shadow: 0 10px 22px var(--shadow);
+}
+
+.theme-toggle-icon {
+    font-size: 1rem;
+    line-height: 1;
+    font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+}
+
+.theme-toggle-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
 
 /* =========================================
    LINKS
@@ -261,7 +322,7 @@ body {
 
     border-radius: 8px;
 
-    color: #ffffff;
+    color: var(--text);
 
     background-color: rgba(124, 92, 255, 0.1);
 
@@ -323,7 +384,7 @@ body {
 
     display: block;
 
-    background-color: #ffffff;
+    background-color: var(--text);
 
     border-radius: 10px;
 
@@ -513,7 +574,7 @@ body {
 
     font-weight: 800;
 
-    color: #ffffff;
+    color: var(--text);
 }
 
 
@@ -537,7 +598,7 @@ body {
 
     font-weight: 600;
 
-    color: #d9dbe2;
+    color: var(--text-secondary);
 }
 
 
@@ -673,7 +734,7 @@ body {
 
     margin-top: 42px;
 
-    color: #676c78;
+    color: var(--text-muted);
 
     font-size: 11px;
 
@@ -695,11 +756,11 @@ body {
 .technology-list span {
     padding: 5px 8px;
 
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border);
 
     border-radius: 5px;
 
-    color: #9da2ae;
+    color: var(--text-secondary);
 
     font-size: 10px;
 
@@ -707,7 +768,7 @@ body {
 
     text-transform: none;
 
-    background: rgba(255, 255, 255, 0.025);
+    background: var(--surface-soft);
 }
 
 
@@ -865,17 +926,17 @@ body {
 
     padding: 13px 16px;
 
-    border: 1px solid rgba(255, 255, 255, 0.09);
+    border: 1px solid var(--border);
 
     border-radius: 11px;
 
-    background: rgba(14, 15, 21, 0.88);
+    background: var(--surface-strong);
 
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
 
     box-shadow:
-        0 15px 40px rgba(0, 0, 0, 0.35);
+        0 15px 40px var(--shadow);
 
     animation:
         floatingCard 4s ease-in-out infinite;
@@ -912,14 +973,14 @@ body {
 
 
 .code-card strong {
-    color: #ffffff;
+    color: var(--text);
 
     font-size: 11px;
 }
 
 
 .code-card small {
-    color: #727783;
+    color: var(--text-muted);
 
     font-size: 9px;
 }
@@ -1145,7 +1206,7 @@ body {
 .section-title {
     font-size: clamp(32px, 5vw, 48px);
     font-weight: 800;
-    color: #ffffff;
+    color: var(--text);
     letter-spacing: -1.5px;
     margin: 0;
 }
@@ -1178,7 +1239,7 @@ body {
 .about-lead {
     font-size: 20px;
     line-height: 1.6;
-    color: #ffffff;
+    color: var(--text);
     font-weight: 500;
 }
 
@@ -1189,7 +1250,7 @@ body {
 }
 
 .about-description strong {
-    color: #ffffff;
+    color: var(--text);
     font-weight: 600;
 }
 
@@ -1222,11 +1283,13 @@ body {
     border: 1px solid rgba(124, 92, 255, 0.2);
     font-size: 18px;
     flex-shrink: 0;
+    font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+    line-height: 1;
 }
 
 .highlight-item strong {
     display: block;
-    color: #ffffff;
+    color: var(--text);
     font-size: 15px;
     margin-bottom: 2px;
 }
@@ -1250,8 +1313,8 @@ body {
 .info-card {
     padding: 24px;
     border-radius: 16px;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.07);
+    background: var(--surface-soft);
+    border: 1px solid var(--border);
     transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
 }
 
@@ -1281,7 +1344,7 @@ body {
 }
 
 .info-card h3 {
-    color: #ffffff;
+    color: var(--text);
     font-size: 18px;
     font-weight: 600;
     margin: 0;
@@ -1331,8 +1394,8 @@ body {
     position: relative;
     padding: 30px;
     border-radius: 20px;
-    background: rgba(255, 255, 255, 0.018);
-    border: 1px solid rgba(255, 255, 255, 0.07);
+    background: var(--surface-soft);
+    border: 1px solid var(--border);
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
@@ -1368,10 +1431,12 @@ body {
     border: 1px solid rgba(124, 92, 255, 0.2);
     font-size: 20px;
     flex-shrink: 0;
+    font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+    line-height: 1;
 }
 
 .skills-card h3 {
-    color: #ffffff;
+    color: var(--text);
     font-size: 18px;
     font-weight: 700;
     margin: 0;
@@ -1402,9 +1467,9 @@ body {
     border-radius: 8px;
     font-size: 13px;
     font-weight: 500;
-    color: #d9dbe2;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--text-secondary);
+    background: var(--surface-soft);
+    border: 1px solid var(--border);
     transition: border-color 0.25s ease, background 0.25s ease;
 }
 
@@ -1504,8 +1569,8 @@ body {
 
 .project-card {
     border-radius: 20px;
-    background: rgba(255, 255, 255, 0.018);
-    border: 1px solid rgba(255, 255, 255, 0.07);
+    background: var(--surface-soft);
+    border: 1px solid var(--border);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -1586,7 +1651,7 @@ body {
 }
 
 .project-title {
-    color: #ffffff;
+    color: var(--text);
     font-size: 18px;
     font-weight: 700;
     margin: 0 0 10px 0;
@@ -1613,9 +1678,9 @@ body {
     font-size: 11px;
     padding: 4px 10px;
     border-radius: 6px;
-    color: #a2a7b4;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: var(--text-secondary);
+    background: var(--surface-soft);
+    border: 1px solid var(--border);
 }
 
 /* LINKS DO PROJETO */
@@ -1727,7 +1792,7 @@ body {
 /* COLUNA DE INFORMAÇÕES */
 
 .contact-heading {
-    color: #ffffff;
+    color: var(--text);
     font-size: 24px;
     font-weight: 700;
     line-height: 1.4;
@@ -1753,8 +1818,8 @@ body {
     gap: 18px;
     padding: 18px 22px;
     border-radius: 14px;
-    background: rgba(255, 255, 255, 0.018);
-    border: 1px solid rgba(255, 255, 255, 0.07);
+    background: var(--surface-soft);
+    border: 1px solid var(--border);
     text-decoration: none;
     transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
 }
@@ -1775,6 +1840,8 @@ body {
     border: 1px solid rgba(124, 92, 255, 0.2);
     font-size: 20px;
     flex-shrink: 0;
+    font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+    line-height: 1;
 }
 
 .contact-card-text {
@@ -1791,7 +1858,7 @@ body {
 }
 
 .contact-card-text strong {
-    color: #ffffff;
+    color: var(--text);
     font-size: 15px;
     font-weight: 600;
 }
@@ -1812,7 +1879,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #626773;
+    color: var(--text-muted);
     font-size: 13px;
 }
 
